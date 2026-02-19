@@ -1,13 +1,25 @@
-export function renderMetricCard({ label, value, target, status }) {
+export function renderMetricCard({ label, value, target, status = 'neutral' }) {
   return `
-    <article class="metric-card metric-${status}">
-      <p class="metric-label">${label}</p>
-      <p class="metric-value">${value}</p>
-      <p class="metric-target">목표: ${target}</p>
+    <article class="kpi-card tone-${status}">
+      <p class="kpi-label">${label}</p>
+      <p class="kpi-value">${value}</p>
+      <p class="kpi-target">목표: ${target}</p>
     </article>
   `;
 }
 
 export function badge(text, tone = 'neutral') {
-  return `<span class="badge badge-${tone}">${text}</span>`;
+  return `<span class="status-chip ${tone}">${text}</span>`;
+}
+
+export function renderQualityCard({ title, benchmark, detail, status = 'neutral' }) {
+  return `
+    <article class="advantage-card ${status}">
+      <div class="panel-head">
+        <h4>${title}</h4>
+        ${badge(benchmark, status)}
+      </div>
+      <p>${detail}</p>
+    </article>
+  `;
 }

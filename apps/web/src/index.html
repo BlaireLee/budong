@@ -3,91 +3,149 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#0e7490" />
-    <title>Budong Academy</title>
+    <meta name="theme-color" content="#0f766e" />
+    <title>BUDONG QUEST | 중학생 부동산 실전학습</title>
     <link rel="manifest" href="/manifest.webmanifest" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=IBM+Plex+Sans+KR:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
-    <div class="backdrop" aria-hidden="true"></div>
-    <main class="layout">
-      <header class="hero">
-        <p class="hero-kicker">중학생을 위한 실전 부동산</p>
-        <h1>상황형 퀴즈로 배우는<br />전세·월세·보증금·대출</h1>
-        <p class="hero-copy">
-          어려운 용어 대신 실제 상황으로 배우고, 내 선택이 왜 맞는지 바로 피드백을 받으세요.
-        </p>
+    <div class="aurora" aria-hidden="true"></div>
+    <div class="grid-noise" aria-hidden="true"></div>
+
+    <main class="app-shell">
+      <header class="top-nav card-elevated">
+        <div class="brand-block">
+          <p class="brand-kicker">중학생 실전 금융 리터러시</p>
+          <h1>BUDONG QUEST</h1>
+        </div>
+        <div class="top-status">
+          <span id="hero-user-pill" class="status-chip neutral">로그인 전</span>
+          <span id="hero-country-pill" class="status-chip neutral">국가 미선택</span>
+          <span id="hero-aha-pill" class="status-chip neutral">아하 모먼트 미측정</span>
+        </div>
       </header>
 
-      <section class="panel" aria-labelledby="signup-title">
-        <h2 id="signup-title">1) 시작하기</h2>
-        <form id="signup-form" class="form-grid">
-          <label>
-            출생연도
-            <input id="birth-year" type="number" min="2006" max="2015" value="2012" required />
-          </label>
-          <label>
-            국가
-            <select id="country" required>
-              <option value="KR">한국</option>
-              <option value="US">미국</option>
-            </select>
-          </label>
-          <label>
-            보호자 연락처(선택)
-            <input id="guardian-contact" type="text" placeholder="010-0000-0000 or parent@email.com" />
-          </label>
-          <button type="submit">계정 생성</button>
-        </form>
-        <p id="signup-result" class="result"></p>
-      </section>
-
-      <section class="panel" aria-labelledby="mission-title">
-        <div class="panel-head">
-          <h2 id="mission-title">2) 미션 선택</h2>
-          <button id="refresh-lessons" class="secondary">미션 새로고침</button>
+      <section class="hero card-elevated">
+        <div class="hero-copy">
+          <p class="hero-kicker">상황형 미션 x 즉시 피드백</p>
+          <h2>전세·월세·보증금·대출을<br />"내 선택"으로 배운다</h2>
+          <p>
+            어려운 개념 설명만 읽는 대신, 실제로 겪을 수 있는 상황에서 선택하고 결과를 확인하며
+            판단력을 키우는 학습 서비스입니다.
+          </p>
+          <div class="hero-actions">
+            <a href="#signup-title" class="btn ghost">1분 세팅 시작</a>
+            <button id="refresh-ops-hero" class="btn subtle" type="button">운영 상태 새로고침</button>
+          </div>
         </div>
-        <div id="lessons" class="lesson-grid" role="list"></div>
+        <aside class="journey-panel">
+          <p class="journey-title">이번 세션 진행률</p>
+          <p id="journey-progress-label" class="journey-copy">미션 0 / 0 완료</p>
+          <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+            <div id="journey-progress-fill" class="progress-fill"></div>
+          </div>
+          <p id="journey-meta" class="journey-meta">가입 후 첫 미션 완료까지 시간을 측정합니다.</p>
+        </aside>
       </section>
 
-      <section class="panel" aria-labelledby="simulation-title">
-        <h2 id="simulation-title">3) 상황형 퀴즈</h2>
-        <article id="simulation-card" class="simulation-card">
-          <p>미션을 선택하면 여기서 퀴즈가 시작됩니다.</p>
+      <section class="workspace-grid">
+        <article class="panel card-elevated">
+          <div class="panel-head">
+            <h3 id="signup-title">1) 프로필 설정</h3>
+            <span class="tag">Activation 시작점</span>
+          </div>
+          <form id="signup-form" class="form-grid">
+            <label>
+              출생연도
+              <input id="birth-year" type="number" min="2006" max="2015" value="2012" required />
+            </label>
+            <label>
+              국가
+              <select id="country" required>
+                <option value="KR">한국</option>
+                <option value="US">미국</option>
+              </select>
+            </label>
+            <label>
+              보호자 연락처(선택)
+              <input id="guardian-contact" type="text" placeholder="010-0000-0000 or parent@email.com" />
+            </label>
+            <button type="submit" class="btn primary">계정 생성</button>
+          </form>
+          <p id="signup-result" class="result neutral">아직 가입 전입니다.</p>
+        </article>
+
+        <article class="panel card-elevated">
+          <div class="panel-head">
+            <h3 id="mission-title">2) 미션 선택</h3>
+            <button id="refresh-lessons" class="btn subtle" type="button">미션 새로고침</button>
+          </div>
+          <p class="section-copy">난이도와 예상 시간을 보고 오늘 끝낼 미션을 선택하세요.</p>
+          <div id="lessons" class="lesson-grid" role="list"></div>
+        </article>
+
+        <article class="panel card-elevated">
+          <div class="panel-head">
+            <h3 id="simulation-title">3) 상황형 실습</h3>
+            <span class="tag">Aha Moment</span>
+          </div>
+          <article id="simulation-card" class="simulation-card">
+            <p>미션을 선택하면 여기서 퀴즈가 시작됩니다.</p>
+          </article>
+        </article>
+
+        <article class="panel card-elevated">
+          <div class="panel-head">
+            <h3 id="ads-title">4) 광고 정책 확인</h3>
+            <span class="tag">안전장치</span>
+          </div>
+          <div class="form-inline">
+            <button id="grant-consent" class="btn subtle" type="button">보호자 동의 처리</button>
+            <button id="check-ad-mode" class="btn primary" type="button">광고 모드 확인</button>
+          </div>
+          <p id="ads-result" class="result neutral">아직 확인하지 않았습니다.</p>
         </article>
       </section>
 
-      <section class="panel" aria-labelledby="ads-title">
-        <h2 id="ads-title">4) 광고 정책 확인</h2>
-        <div class="form-inline">
-          <button id="grant-consent" class="secondary">보호자 동의 처리</button>
-          <button id="check-ad-mode">광고 모드 확인</button>
-        </div>
-        <p id="ads-result" class="result"></p>
+      <section class="insight-grid">
+        <article class="panel card-elevated">
+          <div class="panel-head">
+            <h3 id="kpi-title">5) KPI 스냅샷</h3>
+            <button id="refresh-kpi" class="btn subtle" type="button">KPI 갱신</button>
+          </div>
+          <div id="kpi-cards" class="kpi-grid"></div>
+        </article>
+
+        <article class="panel card-elevated">
+          <div class="panel-head">
+            <h3>경쟁력 기준 보드</h3>
+            <span id="design-score" class="score-pill">점수 0 / 100</span>
+          </div>
+          <p class="section-copy">
+            듀오링고형 학습 서비스 기준으로 매 세션에서 즉시 확인하는 제품 품질 체크입니다.
+          </p>
+          <div id="advantage-cards" class="advantage-grid"></div>
+        </article>
       </section>
 
-      <section class="panel" aria-labelledby="kpi-title">
+      <section class="panel card-elevated">
         <div class="panel-head">
-          <h2 id="kpi-title">5) KPI 스냅샷</h2>
-          <button id="refresh-kpi" class="secondary">KPI 갱신</button>
+          <h3 id="ops-title">6) 개발/배포 현황 (GitHub + Vercel)</h3>
+          <button id="refresh-ops" class="btn subtle" type="button">상태 새로고침</button>
         </div>
-        <div id="kpi-cards" class="kpi-grid"></div>
-      </section>
-
-      <section class="panel" aria-labelledby="ops-title">
-        <div class="panel-head">
-          <h2 id="ops-title">6) 개발/배포 현황 (GitHub + Vercel)</h2>
-          <button id="refresh-ops" class="secondary">상태 새로고침</button>
-        </div>
-        <p id="ops-result" class="result"></p>
+        <p id="ops-result" class="result neutral">초기 상태를 불러오는 중입니다.</p>
         <div id="ops-cards" class="ops-grid"></div>
       </section>
+
+      <footer class="footer-note">
+        BUDONG QUEST v1 · 모바일 웹 우선 · 학습 몰입도와 실전 판단력 향상에 집중
+      </footer>
     </main>
 
     <script type="module" src="/app.js"></script>

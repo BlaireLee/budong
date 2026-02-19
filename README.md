@@ -28,6 +28,9 @@
 - 배포 구조: `docs/DEPLOYMENT_VERCEL.md`
 - 실행 체크리스트: `docs/ONE_CLICK_CHECKLIST_KO.md`
 
+## 브랜딩/디자인 시스템
+- 브랜딩 컨셉 + 토큰 + 경쟁력 점검 기준: `docs/BRANDING_DESIGN_SYSTEM_V1_KO.md`
+
 ## 설계 원칙
 - 도메인 우선 분리: 서비스/저장소/정책 엔진 분리
 - 확장성: in-memory 저장소를 인터페이스화하여 DB 교체 가능

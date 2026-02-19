@@ -1,16 +1,23 @@
 :root {
-  --bg: #f4f3ef;
-  --surface: #fffdfa;
-  --ink: #1f2a37;
-  --ink-soft: #4b5563;
-  --brand: #0e7490;
-  --brand-strong: #115e59;
-  --accent: #f59e0b;
-  --success: #15803d;
-  --danger: #b91c1c;
-  --radius-md: 12px;
-  --radius-lg: 18px;
-  --shadow-md: 0 10px 30px rgba(17, 24, 39, 0.12);
-  --font-heading: 'Fraunces', Georgia, serif;
+  --color-bg-canvas: #f3f7ea;
+  --color-bg-surface: #fffdf5;
+  --color-bg-strong: #ffffff;
+  --color-ink-strong: #111827;
+  --color-ink: #1f2937;
+  --color-ink-soft: #475467;
+  --color-brand: #0f766e;
+  --color-brand-strong: #115e59;
+  --color-accent: #f59e0b;
+  --color-accent-strong: #ea580c;
+  --color-success: #087443;
+  --color-warning: #b54708;
+  --color-danger: #b42318;
+  --color-neutral: #667085;
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-lg: 26px;
+  --shadow-md: 0 14px 34px rgba(16, 24, 40, 0.1);
+  --shadow-lg: 0 26px 70px rgba(16, 24, 40, 0.12);
+  --font-heading: 'Chakra Petch', 'Segoe UI', sans-serif;
   --font-body: 'IBM Plex Sans KR', 'Noto Sans KR', sans-serif;
 }
