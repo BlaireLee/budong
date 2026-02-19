@@ -5,7 +5,7 @@
   "outputDirectory": "public",
   "rewrites": [
     {
-      "source": "/v1/(.*)",
+      "source": "/v1/:path*",
       "destination": "/api"
     },
     {
@@ -13,15 +13,11 @@
       "destination": "/api"
     },
     {
-      "source": "/(.*\\.(js|css|webmanifest|svg|png|jpg|jpeg|ico))",
-      "destination": "/$1"
-    },
-    {
       "source": "/",
       "destination": "/index.html"
     },
     {
-      "source": "/(.*)",
+      "source": "/:path*",
       "destination": "/index.html"
     }
   ]
