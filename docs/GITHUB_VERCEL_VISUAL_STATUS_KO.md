@@ -1,7 +1,7 @@
 # GitHub + Vercel 현황을 가장 빠르게 보는 방법
 
 ## 0) 한 번에 실행 (권장)
-1. `.env.example`를 참고해 환경변수 설정
+1. `.env.local.example`를 참고해 환경변수 설정
 2. 아래 한 줄 실행
 ```bash
 ./ops/setup-all.sh

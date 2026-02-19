@@ -4,6 +4,13 @@ set -euo pipefail
 ROOT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT_DIR"
 
+if [[ -f "$ROOT_DIR/.env.local" ]]; then
+  set -a
+  source "$ROOT_DIR/.env.local"
+  set +a
+  echo "[env] Loaded .env.local"
+fi
+
 echo "[1/4] Running tests"
 npm test
 

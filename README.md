@@ -24,7 +24,7 @@
 - 웹 화면의 `6) 개발/배포 현황 (GitHub + Vercel)` 섹션에서 확인할 수 있습니다.
 - API 엔드포인트: `GET /v1/ops/status`
 - 설정 방법: `docs/GITHUB_VERCEL_VISUAL_STATUS_KO.md`
-- 원클릭 세팅: `./ops/setup-all.sh`
+- 원클릭 세팅: `./ops/setup-all.sh` (옵션: `.env.local` 자동 로드)
 - 배포 구조: `docs/DEPLOYMENT_VERCEL.md`
 - 실행 체크리스트: `docs/ONE_CLICK_CHECKLIST_KO.md`
 
