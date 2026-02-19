@@ -1,0 +1,16 @@
+:root {
+  --bg: #f4f3ef;
+  --surface: #fffdfa;
+  --ink: #1f2a37;
+  --ink-soft: #4b5563;
+  --brand: #0e7490;
+  --brand-strong: #115e59;
+  --accent: #f59e0b;
+  --success: #15803d;
+  --danger: #b91c1c;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --shadow-md: 0 10px 30px rgba(17, 24, 39, 0.12);
+  --font-heading: 'Fraunces', Georgia, serif;
+  --font-body: 'IBM Plex Sans KR', 'Noto Sans KR', sans-serif;
+}

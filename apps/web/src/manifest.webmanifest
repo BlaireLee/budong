@@ -1,0 +1,9 @@
+{
+  "name": "Budong Academy",
+  "short_name": "Budong",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fff7ed",
+  "theme_color": "#0e7490",
+  "description": "중학생을 위한 실전 부동산 학습 앱"
+}

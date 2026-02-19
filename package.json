@@ -1,0 +1,24 @@
+{
+  "name": "budong-academy",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Middle-school real-estate learning platform monorepo",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "node scripts/dev.js",
+    "dev:api": "node apps/api/src/server.js",
+    "dev:web": "node apps/web/src/server.js",
+    "build:web": "node scripts/build-web.js",
+    "build": "npm run build:web",
+    "test": "node --test tests/*.test.js",
+    "check": "npm run test",
+    "ops:setup": "node scripts/bootstrap-integrations.js"
+  },
+  "engines": {
+    "node": ">=18.8.0"
+  }
+}

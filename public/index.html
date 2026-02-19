@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0e7490" />
+    <title>Budong Academy</title>
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=IBM+Plex+Sans+KR:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="backdrop" aria-hidden="true"></div>
+    <main class="layout">
+      <header class="hero">
+        <p class="hero-kicker">중학생을 위한 실전 부동산</p>
+        <h1>상황형 퀴즈로 배우는<br />전세·월세·보증금·대출</h1>
+        <p class="hero-copy">
+          어려운 용어 대신 실제 상황으로 배우고, 내 선택이 왜 맞는지 바로 피드백을 받으세요.
+        </p>
+      </header>
+
+      <section class="panel" aria-labelledby="signup-title">
+        <h2 id="signup-title">1) 시작하기</h2>
+        <form id="signup-form" class="form-grid">
+          <label>
+            출생연도
+            <input id="birth-year" type="number" min="2006" max="2015" value="2012" required />
+          </label>
+          <label>
+            국가
+            <select id="country" required>
+              <option value="KR">한국</option>
+              <option value="US">미국</option>
+            </select>
+          </label>
+          <label>
+            보호자 연락처(선택)
+            <input id="guardian-contact" type="text" placeholder="010-0000-0000 or parent@email.com" />
+          </label>
+          <button type="submit">계정 생성</button>
+        </form>
+        <p id="signup-result" class="result"></p>
+      </section>
+
+      <section class="panel" aria-labelledby="mission-title">
+        <div class="panel-head">
+          <h2 id="mission-title">2) 미션 선택</h2>
+          <button id="refresh-lessons" class="secondary">미션 새로고침</button>
+        </div>
+        <div id="lessons" class="lesson-grid" role="list"></div>
+      </section>
+
+      <section class="panel" aria-labelledby="simulation-title">
+        <h2 id="simulation-title">3) 상황형 퀴즈</h2>
+        <article id="simulation-card" class="simulation-card">
+          <p>미션을 선택하면 여기서 퀴즈가 시작됩니다.</p>
+        </article>
+      </section>
+
+      <section class="panel" aria-labelledby="ads-title">
+        <h2 id="ads-title">4) 광고 정책 확인</h2>
+        <div class="form-inline">
+          <button id="grant-consent" class="secondary">보호자 동의 처리</button>
+          <button id="check-ad-mode">광고 모드 확인</button>
+        </div>
+        <p id="ads-result" class="result"></p>
+      </section>
+
+      <section class="panel" aria-labelledby="kpi-title">
+        <div class="panel-head">
+          <h2 id="kpi-title">5) KPI 스냅샷</h2>
+          <button id="refresh-kpi" class="secondary">KPI 갱신</button>
+        </div>
+        <div id="kpi-cards" class="kpi-grid"></div>
+      </section>
+
+      <section class="panel" aria-labelledby="ops-title">
+        <div class="panel-head">
+          <h2 id="ops-title">6) 개발/배포 현황 (GitHub + Vercel)</h2>
+          <button id="refresh-ops" class="secondary">상태 새로고침</button>
+        </div>
+        <p id="ops-result" class="result"></p>
+        <div id="ops-cards" class="ops-grid"></div>
+      </section>
+    </main>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
