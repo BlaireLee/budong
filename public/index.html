@@ -3,26 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#0f766e" />
+    <meta name="theme-color" content="#1f4b7f" />
     <title>BUDONG QUEST | 중학생 부동산 실전학습</title>
     <link rel="manifest" href="/manifest.webmanifest" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap"
       rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
     />
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
-    <div class="aurora" aria-hidden="true"></div>
-    <div class="grid-noise" aria-hidden="true"></div>
-
     <main class="app-shell">
       <header class="top-nav card-elevated">
-        <div class="brand-block">
-          <p class="brand-kicker">중학생 실전 금융 리터러시</p>
-          <h1>BUDONG QUEST</h1>
+        <div>
+          <p class="eyebrow">BUDONG QUEST</p>
+          <h1>중학생 부동산 실전학습</h1>
         </div>
         <div class="top-status">
           <span id="hero-user-pill" class="status-chip neutral">로그인 전</span>
@@ -33,17 +28,17 @@
 
       <section class="hero card-elevated">
         <div class="hero-copy">
-          <p class="hero-kicker">상황형 미션 x 즉시 피드백</p>
-          <h2>전세·월세·보증금·대출을<br />"내 선택"으로 배운다</h2>
+          <h2>전세·월세·보증금·대출을<br />설명보다 선택으로 익힙니다</h2>
           <p>
-            어려운 개념 설명만 읽는 대신, 실제로 겪을 수 있는 상황에서 선택하고 결과를 확인하며
-            판단력을 키우는 학습 서비스입니다.
+            실제 상황형 질문에 답하고 바로 피드백을 받아, 개념 이해가 아니라
+            생활 의사결정 능력을 훈련하는 학습 서비스입니다.
           </p>
           <div class="hero-actions">
-            <a href="#signup-title" class="btn ghost">1분 세팅 시작</a>
+            <a href="#signup-title" class="btn ghost">시작하기</a>
             <button id="refresh-ops-hero" class="btn subtle" type="button">운영 상태 새로고침</button>
           </div>
         </div>
+
         <aside class="journey-panel">
           <p class="journey-title">이번 세션 진행률</p>
           <p id="journey-progress-label" class="journey-copy">미션 0 / 0 완료</p>
@@ -57,8 +52,7 @@
       <section class="workspace-grid">
         <article class="panel card-elevated">
           <div class="panel-head">
-            <h3 id="signup-title">1) 프로필 설정</h3>
-            <span class="tag">Activation 시작점</span>
+            <h3 id="signup-title">프로필 설정</h3>
           </div>
           <form id="signup-form" class="form-grid">
             <label>
@@ -83,17 +77,16 @@
 
         <article class="panel card-elevated">
           <div class="panel-head">
-            <h3 id="mission-title">2) 미션 선택</h3>
-            <button id="refresh-lessons" class="btn subtle" type="button">미션 새로고침</button>
+            <h3 id="mission-title">미션 선택</h3>
+            <button id="refresh-lessons" class="btn subtle" type="button">새로고침</button>
           </div>
-          <p class="section-copy">난이도와 예상 시간을 보고 오늘 끝낼 미션을 선택하세요.</p>
+          <p class="section-copy">난이도와 예상 시간을 보고 오늘 할 미션을 고르세요.</p>
           <div id="lessons" class="lesson-grid" role="list"></div>
         </article>
 
         <article class="panel card-elevated">
           <div class="panel-head">
-            <h3 id="simulation-title">3) 상황형 실습</h3>
-            <span class="tag">Aha Moment</span>
+            <h3 id="simulation-title">상황형 실습</h3>
           </div>
           <article id="simulation-card" class="simulation-card">
             <p>미션을 선택하면 여기서 퀴즈가 시작됩니다.</p>
@@ -102,8 +95,7 @@
 
         <article class="panel card-elevated">
           <div class="panel-head">
-            <h3 id="ads-title">4) 광고 정책 확인</h3>
-            <span class="tag">안전장치</span>
+            <h3 id="ads-title">광고 정책 확인</h3>
           </div>
           <div class="form-inline">
             <button id="grant-consent" class="btn subtle" type="button">보호자 동의 처리</button>
@@ -116,36 +108,29 @@
       <section class="insight-grid">
         <article class="panel card-elevated">
           <div class="panel-head">
-            <h3 id="kpi-title">5) KPI 스냅샷</h3>
-            <button id="refresh-kpi" class="btn subtle" type="button">KPI 갱신</button>
+            <h3 id="kpi-title">KPI 스냅샷</h3>
+            <button id="refresh-kpi" class="btn subtle" type="button">갱신</button>
           </div>
           <div id="kpi-cards" class="kpi-grid"></div>
         </article>
 
         <article class="panel card-elevated">
           <div class="panel-head">
-            <h3>경쟁력 기준 보드</h3>
+            <h3>제품 품질 점검</h3>
             <span id="design-score" class="score-pill">점수 0 / 100</span>
           </div>
-          <p class="section-copy">
-            듀오링고형 학습 서비스 기준으로 매 세션에서 즉시 확인하는 제품 품질 체크입니다.
-          </p>
           <div id="advantage-cards" class="advantage-grid"></div>
         </article>
       </section>
 
       <section class="panel card-elevated">
         <div class="panel-head">
-          <h3 id="ops-title">6) 개발/배포 현황 (GitHub + Vercel)</h3>
-          <button id="refresh-ops" class="btn subtle" type="button">상태 새로고침</button>
+          <h3 id="ops-title">개발/배포 현황 (GitHub + Vercel)</h3>
+          <button id="refresh-ops" class="btn subtle" type="button">새로고침</button>
         </div>
         <p id="ops-result" class="result neutral">초기 상태를 불러오는 중입니다.</p>
         <div id="ops-cards" class="ops-grid"></div>
       </section>
-
-      <footer class="footer-note">
-        BUDONG QUEST v1 · 모바일 웹 우선 · 학습 몰입도와 실전 판단력 향상에 집중
-      </footer>
     </main>
 
     <script type="module" src="/app.js"></script>

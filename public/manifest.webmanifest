@@ -3,7 +3,7 @@
   "short_name": "Budong",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#f3f7ea",
-  "theme_color": "#0f766e",
+  "background_color": "#f4f5f7",
+  "theme_color": "#1f4b7f",
   "description": "중학생을 위한 상황형 부동산 실전 학습 앱"
 }
